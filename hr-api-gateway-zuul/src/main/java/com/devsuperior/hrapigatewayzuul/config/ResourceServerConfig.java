@@ -48,6 +48,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.cors().configurationSource(corsConfigurationSource());
     }
 
+    // CONFIGURAÇÃO DO CORS
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfig = new CorsConfiguration();
@@ -68,4 +69,5 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
+
 }
